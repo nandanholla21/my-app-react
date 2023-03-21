@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+//import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Navbar, NavbarBrand, Jumbotron } from 'reactstrap';
+import Menu from './components/MenuComponent';
+import DishdetailComponent from './components/DishdetailComponent';
+import { DISHES } from './shared/dishes';
+import { BrowserRouter } from 'react-router-dom';
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
+import Header from './components/HeaderComponent';
+import Footer from './components/FooterComponent';
+import Main from './components/MainComponent';
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Main />
+     </BrowserRouter>
+    );
+  }
 }
 
 export default App;
